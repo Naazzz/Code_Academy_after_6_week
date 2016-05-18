@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		body:first-child{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<script>
+	
+//--------counting the time
+
+var clock_setinterval = setInterval(function(){ clock() }, 1000);
+
+var current_time;
+var locale_time;
+
+//------------alarm
+var time=new Date();
+var hour=time.setHours(14,30,10);
+var hour_string=time.toLocaleTimeString();
+
+function clock(){
+	current_time=new Date();
+	locale_time= current_time.toLocaleTimeString();
+	document.close();
+	document.write("<p>"+locale_time+"</p>");
+	document.write("<button onclick='stop_function()'>stop</button>");
+	console.log(locale_time);
+	if (locale_time==hour_string){
+	alert("hell yeah");
+	stop_function();
+}
+
+}
+function stop_function(){
+	clearInterval(clock_setinterval);
+}
+
+//-----alerrt after 3san function
+/*function do_alert(){
+	setTimeout(alert_function,3000);
+}
+function alert_function(){
+	alert("cicek cicek ag ciceyim");
+}
+do_alert();*/
+</script>
+
+</body>
+</html>

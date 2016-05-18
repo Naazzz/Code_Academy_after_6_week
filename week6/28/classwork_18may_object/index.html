@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	
+function news(t_size,t_color,t_style,text,i_url,i_width,i_height){
+
+		this.t_size=t_size,
+		this.t_color=t_color,
+		this.t_style=t_style,
+		this.text=text,
+		this.i_url=i_url,
+		this.i_width=i_width,
+		this.i_height=i_height;
+
+	this.create_text=function(){
+        document.write("<div style='font-size:"+this.t_size+";color:"+this.t_color+";font-family:"+this.t_style+"px;margin:5px; display:inline-block;'>"+this.text+"</div>");
+  	}
+		
+	this.create_image=function(){
+        document.write("<div style='background: url("+this.i_url+");background-size:cover; width:"+this.i_width+"px;height:"+this.i_height+"px;display:inline-block;'></div>");
+      }
+      this.create_news = function(){
+		document.write("<div style='width:"+this.i_width+"px; display:inline-block; margin:5px; border:2px solid gray; '>");
+		this.create_image();
+		this.create_text();
+		document.write("</div>");
+	}
+}
+var news_taylor = new news(14,'green','cursive',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero dolorem, dolore, eligendi deserunt neque asperiores ea blanditiis cumque atque quaerat cum velit commodi sed. Nihil dolorem maiores deleniti est delectus.",'01.jpg',200,200);
+news_taylor.create_news();
+
+var news_justin = new news(14,'green','cursive',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero dolorem, dolore, eligendi deserunt neque asperiores ea blanditiis cumque atque quaerat cum velit commodi sed. Nihil dolorem maiores deleniti est delectus.",'02.png',200,200);
+news_justin.create_news();
+
+var news_jon = new news(14,'green','cursive',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero dolorem, dolore, eligendi deserunt neque asperiores ea blanditiis cumque atque quaerat cum velit commodi sed. Nihil dolorem maiores deleniti est delectus.",'3.jpg',200,200);
+news_jon.create_news();
+
+var news_ian = new news(14,'green','cursive',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero dolorem, dolore, eligendi deserunt neque asperiores ea blanditiis cumque atque quaerat cum velit commodi sed. Nihil dolorem maiores deleniti est delectus.",'04.jpg',200,200);
+news_ian.create_news();
+
+var news_elena = new news(14,'green','cursive',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero dolorem, dolore, eligendi deserunt neque asperiores ea blanditiis cumque atque quaerat cum velit commodi sed. Nihil dolorem maiores deleniti est delectus.",'05.jpg',200,200);
+news_elena.create_news();
+
+</script>
+
+</body>
+</html>

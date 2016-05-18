@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<button onclick="right()">right</button>
+<button  onclick="left()">left</button>
+<div id="main" style="width:200px;height:200px;background-size:cover;" ></div>
+<div class="main"></div>
+
+
+<script>
+
+var pictures = ['1.jpg', '2.jpg','3.jpg','4.jpg','5.jpg'];
+var main = document.getElementById("main");
+var i=0; 
+
+function right()
+{
+main.style.background=('url('+pictures[i]+')');
+main.style.backgroundSize='cover';
+i++;
+if(i>pictures.length-1){
+	i=0;
+}
+}	
+function left()
+{
+main.style.background=('url('+pictures[i]+')');
+main.style.backgroundSize='cover';
+i--;
+if(i<=0){
+	i=pictures.length-1;
+}
+}
+
+setInterval(function() {left()},2000); 
+</script>
+</body>
+</html>

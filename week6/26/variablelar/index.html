@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	
+document.write("<br>");
+
+
+function efqan(){
+	 x=5;
+	document.write(x);
+} 
+function elovset(){
+	return efqan();
+}
+elovset();
+
+document.write("<br>");
+//efqan();
+document.write(x);
+
+/*function hecibala(a){
+	 b=a;
+	 //return  b;
+	document.write(b);
+} 
+
+
+hecibala("heci");*/
+document.write("<br>");
+
+var a=" hecinin oglu ";
+function hecibala(a){
+	var b=a;
+	document.write(b);
+	var a=" hecinin o biri oglu ";
+	document.write(a);
+}
+var a=" hecninn ogye oglu ";
+hecibala(" hecinin yetimleri ");
+
+document.write("<br>");
+document.write(Math.random()*(20)+(-100));
+document.write("<br>");
+var a=new Date();
+document.write(a.getTime()*1000/60);
+document.write("<br>");
+document.write("<br>");
+
+
+
+var month=new Array();
+month[0]="yanvar";
+month[1]="fevral";
+month[2]="mart";
+month[3]="aprel";
+month[4]="may";
+month[5]="iyun";
+month[6]="iyul";
+month[7]="avgust";
+month[8]="sentyabr";
+month[9]="oktyabr";
+month[10]="noyabr";
+month[11]="dekabr";
+
+var tarix=new Date(1996,04,07,13,50,50);
+
+var il=tarix.getFullYear();
+var ay=tarix.getMonth();
+var gun=tarix.getDate();
+var saat=tarix.getHours();
+var deqiqe=tarix.getMinutes();
+var saniye=tarix.getSeconds();
+//document.write("bugun "+month[ay-1]+" ayinin " + gun +" "+il+ "ci ildir");
+var yas=2016-il;
+document.write("men NAz "+yas+" il "+ay+" ay "+gun+" gun "+saat+" saat "+deqiqe+" deqiqe "+saniye+" saniye yashamisham <br>");
+
+var omur=tarix.getTime();
+
+saniye=Math.floor(omur/1000);
+deqiqe=Math.floor(saniye/60);
+saat=Math.floor(deqiqe/60);
+gun=Math.floor(saat/24);
+ay=Math.floor(gun/31);
+yas=Math.floor(ay/12);
+document.write("<br> omur milli millsaniyem: "+omur+"<br>");
+document.write("yas: "+yas+"<br>");
+document.write("ay: "+ay+"<br>");
+document.write("gun: "+gun+"<br>");
+document.write("saat: "+saat+"<br>");
+document.write("deqiqe: "+deqiqe+"<br>");
+document.write("saniye: "+saniye+"<br>");
+
+</script>
+</body>
+</html>
