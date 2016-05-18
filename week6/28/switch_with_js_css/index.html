@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.button_place{
+			width:300px;
+			height:100px;
+			border-radius:50px; 
+			background-color:grey; 
+			margin:100px;
+		}
+		#switch_id{
+			width:140px;
+			height:140px;
+			border-radius:70px; 
+			background-color:lightgrey; 
+			position:relative; 
+			top:-20px;"
+		}
+		@keyframes movement{
+			from{left:0px; }
+			to{left:200px;}
+		}
+	</style>
+</head>
+<body>
+<div class="button_place">
+	<button id="switch_id" onclick="click_it()"></button>
+</div>
+
+<script>	
+	var switch_button = document.getElementById("switch_id");
+	function click_it(){
+		switch_button.style.animationName="movement";
+	}
+</script>
+</body>
+</html>
