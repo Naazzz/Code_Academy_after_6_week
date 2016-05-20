@@ -1,0 +1,28 @@
+.ust{
+	width: 612px;
+	height: 600px;
+	border:2px solid black;
+	box-sizing: border-box;
+	
+}
+
+.alt1{
+	width: 200px;
+	height: 200px;
+	border:3px solid blue;
+	background-color: pink;
+	display: inline-block;
+	box-sizing: border-box;
+	
+
+}
+.alt2{
+	width: 300px;
+	height: 300px;
+	border:3px solid green;
+	background-color: gray;
+	display: inline-block;
+	box-sizing: border-box;
+
+
+}
