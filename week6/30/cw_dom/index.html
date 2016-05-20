@@ -28,11 +28,67 @@
 
 
 <script>
-var a=window.innerHeight;
+	var a=window.innerHeight;
 	document.getElementById("alt11").innerHTML="bu ilk yazidir";
 	document.getElementsByName("rectangle")[1].innerHTML="rectangle yazi";
 	document.getElementsByName("rectangle")[2].style.backgroundColor="purple";
 
+
+	var myDiv= document.createElement("div");
+	myDiv.setAttribute("class","myDiv");
+	var myDiv2= document.createElement("div");
+	myDiv2.setAttribute("class","myDiv2");
+	document.body.appendChild(myDiv);
+	myDiv.appendChild(myDiv2);
+/*
+	function createDiv(width, columns, number){
+		var main = document.createElement("div");
+		main.setAttribute("id", "main");
+		main.style.width = width;
+		main.style.height = width;
+		document.body.appendChild(main);
+		for(var i =0; i<columns; i++)
+		{
+			var column = document.createElement("div");
+			column.style.width = (width/columns-10)+"px";
+		}
+	}
+
+*/
+	var createDivs=function(width,columns,number){
+
+		var main=document.createElement("div");
+		main.setAttribute("id", "main");
+		main.style.width=width+"px";
+		main.style.height=width+"px";
+		main.style.border = "1px solid black";
+		main.style.boxSizing = "border-box";
+		document.body.appendChild(main);
+		
+		for( var i=0; i<columns;i++)
+		{
+			var width_of_column=width/columns-10;
+			var column=document.createElement("div");
+			column.setAttribute("class", "column");
+			column.style.width=width_of_column+"px";
+			column.style.height =width+"px";
+			main.appendChild(column);
+
+			for(var j=0;j<number;j++)
+			{
+				var inner_div=document.createElement("div");
+				inner_div.setAttribute("class", "inner_div");
+				inner_div.style.width=(width_of_column/5)+"px";
+				inner_div.style.height =(width_of_column/5)+"px";
+				column.appendChild(inner_div);
+				
+			}
+		}
+	}
+
+createDivs(600,3,50);
 </script>
+
+
 </body>
 </html>
