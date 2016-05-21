@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exam</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+ 
+<!-- butun goruntu main adli divin icinde -->
+<div class="main">
+
+	<h4><b>MY CAPS MAKER</b></h4>
+
+	<!-- shekil ve text bir arada caps adli divin icinde -->
+	<div class="caps">
+		<img id="picturess" src="2.jpg">
+			<div id="img_text">
+				<span id="change_of_texts">Bu yazini deyishe bilersiniz</span>
+			</div>  
+	</div>
+	
+
+
+<!-- yazi ucun olan text inputu ve buttonu change_text adli divde -->
+	<div class="change_text">
+		<input type="text" id="add_text" placeholder="Text elave edin"><br>
+		<button class="add_text_button" onclick="func_change_text()">texti deyis</button>
+	</div>
+
+<!--shekil ucun olan text inputu ve buttonu change_image adli divde -->
+	<div class="change_image">
+		<input type="text" id="add_image" placeholder="Shekil linki elave edin"><br>
+		<button class="add_text_button" onclick="func_change_picture()">shekli deyis</button>
+	</div>
+	
+<!-- sonuncu 4 button -->
+	<div class="button_list">
+		
+			<button class="effect" onclick="effect_01()">effect 01</button>
+		
+			<button class="effect" onclick="effect_02()">effect 02</button>
+		
+			<button class="effect" onclick="effect_03()">effect 03</button>
+		
+			<button class="effect" onclick="effect_04()">effect 04</button>
+		
+	</div>
+
+</div>
+
+<script>
+
+	
+	
+	function func_change_text(){
+		var yazi=document.getElementById("add_text").value;
+		document.getElementById("change_of_texts").innerHTML  = yazi;
+		console.log(yazi);
+	}
+
+	// effect 01 button
+	var flag=false;
+	function effect_01(){
+		var pic= document.getElementById("picturess");
+		if(!flag)
+		pic.style.border="2px solid red";
+		else
+		pic.style.border="none";
+	flag=!flag;
+	}
+
+	//effect 02 button
+	function effect_02(){
+		var back= document.getElementById("img_text");
+		if(!flag)
+		back.style.backgroundColor="blue";
+		else
+		back.style.backgroundColor="red";
+	flag=!flag;
+	}
+
+	//effect 03 button
+	function effect_03(){
+		var text= document.getElementById("change_of_texts");
+		if(!flag)
+		text.style.fontWeight = "900";
+		else
+		text.style.fontWeight = "100";
+	flag=!flag;
+	}
+
+	//effect 03 button
+	function effect_04(){
+		var text_div= document.getElementById("img_text");
+		var picture_div= document.getElementById("picturess");
+		if(!flag){
+			picture_div;
+			text_div;
+		}
+		else{
+		picture_div;
+			text_div;
+		}
+	flag=!flag;
+	}
+</script>
+</body>
+</html>
