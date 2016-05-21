@@ -64,14 +64,7 @@
 	// picture
 	function func_change_picture(){
 		var yazi=document.getElementById("add_image").value;
-		var x = document.getElementById("picturess").getAttribute("src");
-		console.log(x);
-		x=yazi;
-		console.log(x);
-		var z=document.getElementById("picturess").getAttribute("src").innerHTML  = x;
-		console.log(z);
-		var a = document.getElementById("picturess").getAttribute("src");
-		console.log(a);
+		var x = document.getElementById("picturess").setAttribute("src",yazi);
 	}
 
 	// text
